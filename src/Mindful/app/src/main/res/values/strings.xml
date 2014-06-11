@@ -2,12 +2,12 @@
 <resources>
 
     <string name="app_name">Mindful</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_example">Example action</string>
+
+    <!-- Custom permissions -->
+    <string name="permission_access_data_provider">Ability to access the Mindful Data Provider.</string>
+    <string name="permission_write_data_provider">Ability to write data to the Mindful Data Provider.</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
 </resources>
