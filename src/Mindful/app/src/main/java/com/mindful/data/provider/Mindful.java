@@ -15,8 +15,6 @@ public class Mindful {
 
     public interface InstanceColumns extends MindfulBaseColumns {
 
-        public static final String UID = "uid";
-
         public static final String CATEGORY = "category";
 
         public static final String VALUE = "value";

@@ -16,16 +16,16 @@ public class MindfulContentProvider extends ContentProvider {
 
     private static final String TAG = MindfulContentProvider.class.getSimpleName();
 
-    public static final String AUTHORITY = "com.udrinkin.provider";
+    public static final String AUTHORITY = "com.mindful.provider";
     public static final String SCHEME = "content";
 
-    private static final int ID_USERS = 0;
-    private static final int ID_USERS_SINGLE = 1;
+    private static final int ID_INSTANCE = 0;
+    private static final int ID_INSTANCE_SINGLE = 1;
 
     private static final UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
     static {
-        sUriMatcher.addURI(AUTHORITY, InstanceTable.TABLE_NAME, ID_USERS);
-        sUriMatcher.addURI(AUTHORITY, InstanceTable.TABLE_NAME + "/*", ID_USERS_SINGLE);
+        sUriMatcher.addURI(AUTHORITY, InstanceTable.TABLE_NAME, ID_INSTANCE);
+        sUriMatcher.addURI(AUTHORITY, InstanceTable.TABLE_NAME + "/*", ID_INSTANCE_SINGLE);
     }
 
     // Members
@@ -88,10 +88,10 @@ public class MindfulContentProvider extends ContentProvider {
     public String getType(Uri uri) {
 
         switch (sUriMatcher.match(uri)) {
-            case ID_USERS:
-                return "vnd.android.cursor.dir/vnd.com.udrinkin.provider.user";
-            case ID_USERS_SINGLE:
-                return "vnd.android.cursor.item/vnd.com.udrinkin.provider.user";
+            case ID_INSTANCE:
+                return "vnd.android.cursor.dir/vnd.com.mindful.provider.instance";
+            case ID_INSTANCE_SINGLE:
+                return "vnd.android.cursor.item/vnd.com.mindful.provider.instance";
             default:
                 throw new IllegalArgumentException("on getType: Unknown URI " + uri);
         }
@@ -158,8 +158,8 @@ public class MindfulContentProvider extends ContentProvider {
     private String getTableName(Uri uri) {
         final String tableName;
         switch (sUriMatcher.match(uri)) {
-            case ID_USERS:
-            case ID_USERS_SINGLE:
+            case ID_INSTANCE:
+            case ID_INSTANCE_SINGLE:
                 tableName = InstanceTable.TABLE_NAME;
                 break;
             default:
