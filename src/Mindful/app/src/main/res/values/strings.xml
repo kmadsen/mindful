@@ -3,11 +3,15 @@
 
     <string name="app_name">Mindful</string>
 
+    <string name="title_activity_main">MainActivity</string>
+
     <!-- Custom permissions -->
     <string name="permission_access_data_provider">Ability to access the Mindful Data Provider.</string>
     <string name="permission_write_data_provider">Ability to write data to the Mindful Data Provider.</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="hello_world">Hello world!</string>
+
     <string name="action_settings">Settings</string>
+
+    <string name="hint_instance_comment">Add Comment</string>
+    <string name="description_save_instance">Save this instance</string>
 
 </resources>

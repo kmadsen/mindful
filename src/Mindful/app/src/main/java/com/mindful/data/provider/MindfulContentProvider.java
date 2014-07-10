@@ -16,7 +16,7 @@ public class MindfulContentProvider extends ContentProvider {
 
     private static final String TAG = MindfulContentProvider.class.getSimpleName();
 
-    public static final String AUTHORITY = "com.mindful.provider";
+    public static final String AUTHORITY = "com.mindful.data.provider";
     public static final String SCHEME = "content";
 
     private static final int ID_INSTANCE = 0;
@@ -89,9 +89,9 @@ public class MindfulContentProvider extends ContentProvider {
 
         switch (sUriMatcher.match(uri)) {
             case ID_INSTANCE:
-                return "vnd.android.cursor.dir/vnd.com.mindful.provider.instance";
+                return "vnd.android.cursor.dir/vnd.com.mindful.data.provider.instance";
             case ID_INSTANCE_SINGLE:
-                return "vnd.android.cursor.item/vnd.com.mindful.provider.instance";
+                return "vnd.android.cursor.item/vnd.com.mindful.data.provider.instance";
             default:
                 throw new IllegalArgumentException("on getType: Unknown URI " + uri);
         }

@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.InstanceEntryFragment">
+
+    <ImageButton
+        android:id="@+id/btn_up"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/instance_value"
+        android:layout_toLeftOf="@id/instance_value"
+        android:layout_alignBottom="@id/instance_value"
+        android:src="@drawable/ic_action_good"/>
+
+    <ImageButton
+        android:id="@+id/btn_down"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignTop="@id/instance_value"
+        android:layout_toRightOf="@id/instance_value"
+        android:layout_alignBottom="@id/instance_value"
+        android:src="@drawable/ic_action_bad"/>
+
+    <TextView
+        android:id="@id/instance_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="0"
+        android:layout_above="@+id/btn_save"
+        android:textSize="150sp"/>
+
+    <ImageButton
+        android:id="@+id/btn_save"
+        android:contentDescription="@string/description_save_instance"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_accept"/>
+
+    <EditText
+        android:id="@+id/et_instance_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/btn_save"
+        android:scrollbars="vertical"
+        android:gravity="left"
+        android:inputType="textCapSentences"
+        android:textSize="@dimen/hint_text_size"
+        android:hint="@string/hint_instance_comment" />
+
+</RelativeLayout>

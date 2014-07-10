@@ -17,6 +17,8 @@ public class Mindful {
 
         public static final String CATEGORY = "category";
 
+        public static final String COMMENT = "comment";
+
         public static final String VALUE = "value";
 
         public static final String LATITUDE = "latitude";
