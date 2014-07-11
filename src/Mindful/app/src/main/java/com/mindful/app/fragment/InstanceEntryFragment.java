@@ -87,7 +87,6 @@ public class InstanceEntryFragment extends Fragment {
         // Update the value view
         mValueView.setText(String.valueOf(mInstanceModel.getValue()));
 
-
         return view;
     }
 
@@ -141,7 +140,7 @@ public class InstanceEntryFragment extends Fragment {
                 case R.id.btn_down:
                     Logger.i(TAG, "btn down");
 
-                    mInstanceModel.deccrement();
+                    mInstanceModel.decrement();
                     mValueView.setText(String.valueOf(mInstanceModel.getValue()));
 
                     break;
@@ -166,6 +165,4 @@ public class InstanceEntryFragment extends Fragment {
             }
         }
     };
-
-
 }

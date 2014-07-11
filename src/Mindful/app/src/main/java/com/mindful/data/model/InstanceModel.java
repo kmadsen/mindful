@@ -27,7 +27,7 @@ public class InstanceModel {
         }
     }
 
-    public void deccrement() {
+    public void decrement() {
         if (mValue > MIN_VALUE) {
             mValue--;
         }
