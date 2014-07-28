@@ -14,4 +14,7 @@
     <string name="hint_instance_comment">Add Comment</string>
     <string name="description_save_instance">Save this instance</string>
 
+    <string name="tab_header_input">Input</string>
+    <string name="tab_header_view">View</string>
+
 </resources>
